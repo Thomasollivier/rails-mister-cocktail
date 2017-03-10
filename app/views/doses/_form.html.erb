@@ -1,6 +1,6 @@
 
-<%= simple_form_for cocktail do |c| %>
-<%= c.input :description %>
-<%= c.input :ingredient_id %>
-<%= c.submit %>
+<%= simple_form_for([cocktail, dose]) do |d| %>
+<%= d.input :description %>
+<%= d.association :ingredient, collection: Ingredient.order(:name), prompt: "Choose a ingredient" %>
+<%= d.submit %>
 <% end %>

@@ -2,12 +2,11 @@
 
 <ul>
 <% @cocktails.each do |c| %>
-<li> <%= c.name %> </li>
+<li> <%= link_to c.name, cocktail_path(c) %> </li>
 <% end %>
 </ul>
 
-<%= cl_image_tag(cl_image_tag("mvt6s70yjayrve0r7sp7.jpg"),
-      width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag("yr9mfj8q2dnyeaavbhlp.jpg",
+      width: 400, height: 300, crop: :fill, :effect=>"art:daguerre") %>
 
-<%= cl_image_tag("IMAGE_WITH_FACE_ID", :effect=>"sepia:80",
-  width: 400, height: 300, crop: :thumb, gravity: :face) %>
+<%= link_to 'create a cocktail', new_cocktail_path %>
