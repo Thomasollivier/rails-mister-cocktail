@@ -6,3 +6,8 @@
 <% end %>
 </ul>
 
+<%= cl_image_tag(cl_image_tag("mvt6s70yjayrve0r7sp7.jpg"),
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("IMAGE_WITH_FACE_ID", :effect=>"sepia:80",
+  width: 400, height: 300, crop: :thumb, gravity: :face) %>
